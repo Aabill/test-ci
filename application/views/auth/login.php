@@ -1,4 +1,6 @@
-<form action='/logincheck' method='post'>
+
+
+<form  action="login/check" method="post">
 <div class="form-group">
   <label for="email">Email</label>
   <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Email">
@@ -10,6 +12,7 @@
   <input type="password" class="form-control" name="" id="" placeholder="Password">
 </div>
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="btn btn-primary">Login</button>
+
 
 <form>

@@ -32,6 +32,24 @@ class User extends CI_Controller {
 		$this->load->view('auth/login');
 		$this->load->view('footer');
 	}
+
+	public function check()
+	{
+		if ($this->input->server('REQUEST_METHOD') == 'POST')
+		{
+			$this->load->helper('url');
+			$data['title'] = "POST";
+			$this->load->view('header', $data);
+		}
+		else
+		{
+			return;
+		}
+		$email = $this->input->post();
+		$password = $this->input->post();
+
+		return $email;
+	}
 }
 
 /* End of file welcome.php */
