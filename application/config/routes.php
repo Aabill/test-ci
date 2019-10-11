@@ -44,6 +44,8 @@ $route['404_override'] = '';
 $route['register'] = 'user/register';
 $route['register/create'] = 'user/register_post';
 
+$route['form/check'] = 'form/check';
+
 
 
 /* End of file routes.php */
