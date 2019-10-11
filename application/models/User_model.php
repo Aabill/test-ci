@@ -33,7 +33,8 @@ class User_model extends CI_Model {
         $this->db->where('email', $email);
         $hash = $this->db->get()->row('password');
 
-        return $this->verify_pass_hash($pass, $hash);
+        return $hash;
+        /* return $this->verify_pass_hash($pass, $hash); */
     
     }
 
@@ -54,6 +55,14 @@ class User_model extends CI_Model {
         $this->db->from('users');
         $this->db->where('id', $id);
         return $this->db->get()->row();
+    }
+
+    public function get_user_id_from_email($email)
+    {
+        $this->db->select('id');
+        $this->db->from('users');
+        $this->db->where('email', $email);
+        return $this->db->get()->row('id');
     }
                         
                             
